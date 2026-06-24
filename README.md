@@ -1,5 +1,99 @@
 # Oracle SQL - Guía Rápida
 
+## Índice
+
+### SQL
+
+- [Consultas Básicas](#consultas-básicas)
+  - [Seleccionar datos](#seleccionar-datos)
+  - [Alias](#alias)
+  - [DISTINCT](#distinct)
+- [Filtros](#filtros)
+  - [WHERE](#where)
+  - [IN](#in)
+  - [BETWEEN](#between)
+  - [LIKE](#like)
+  - [NULL](#null)
+- [Ordenamiento](#ordenamiento)
+  - [Ascendente](#ascendente)
+  - [Descendente](#descendente)
+  - [Múltiples columnas](#múltiples-columnas)
+- [Top N registros](#top-n-registros)
+  - [Oracle 12c+](#oracle-12c)
+  - [Registro más reciente](#registro-más-reciente)
+- [Fechas](#fechas)
+- [Funciones de Texto](#funciones-de-texto)
+  - [UPPER](#upper)
+  - [LOWER](#lower)
+  - [INITCAP](#initcap)
+  - [LENGTH](#length)
+  - [SUBSTR](#substr)
+  - [REPLACE](#replace)
+  - [TRIM](#trim)
+  - [INSTR](#instr)
+  - [CONCAT](#concat)
+- [Funciones de Fechas](#funciones-de-fechas)
+  - [SYSDATE](#sysdate)
+  - [SYSTIMESTAMP](#systimestamp)
+  - [TRUNC](#trunc)
+  - [ADD_MONTHS](#add_months)
+  - [MONTHS_BETWEEN](#months_between)
+  - [TO_CHAR](#to_char)
+  - [TO_DATE](#to_date)
+- [Funciones Nulas](#funciones-nulas)
+  - [NVL](#nvl)
+  - [COALESCE](#coalesce)
+- [Funciones Numéricas](#funciones-numéricas)
+  - [ROUND](#round)
+  - [TRUNC (numérico)](#trunc-numérico)
+  - [CEIL](#ceil)
+  - [FLOOR](#floor)
+- [CASE](#case)
+- [Funciones de Agregación](#funciones-de-agregación)
+  - [COUNT](#count)
+  - [SUM](#sum)
+  - [AVG](#avg)
+  - [MIN](#min)
+  - [MAX](#max)
+- [JOINs](#joins)
+  - [INNER JOIN](#inner-join)
+  - [LEFT JOIN](#left-join)
+- [WITH (CTE)](#with-cte)
+- [CASE (por valor de columna)](#case-por-valor-de-columna)
+- [EXISTS](#exists)
+- [UPDATE](#update)
+- [DELETE](#delete)
+- [INSERT](#insert)
+- [MERGE (UPSERT)](#merge-upsert)
+- [Transacciones](#transacciones)
+- [DUAL](#dual)
+- [Diccionario de Datos](#diccionario-de-datos)
+- [JSON](#json)
+  - [JSON_OBJECT](#json_object)
+  - [JSON_ARRAY](#json_array)
+  - [JSON_VALUE](#json_value)
+  - [JSON_QUERY](#json_query)
+  - [JSON_TABLE](#json_table)
+
+### PL/SQL
+
+- [Bloque Anónimo](#bloque-anónimo)
+- [Variables](#variables)
+- [IF](#if)
+- [IF ELSE](#if-else)
+- [LOOP](#loop)
+- [FOR](#for)
+- [WHILE](#while)
+- [SELECT INTO](#select-into)
+- [Manejo de Excepciones](#manejo-de-excepciones)
+- [Procedimiento](#procedimiento)
+- [Parámetros IN](#parámetros-in)
+- [Parámetros OUT](#parámetros-out)
+- [Cursor FOR](#cursor-for)
+- [Buenas Prácticas](#buenas-prácticas)
+
+---
+
 ## Consultas Básicas
 
 ### Seleccionar datos
@@ -547,7 +641,7 @@ Resultado:
 
 ---
 
-### TRUNC
+### TRUNC (numérico)
 
 Eliminar decimales.
 
@@ -692,7 +786,6 @@ Resultado:
 23/06/2026
 ```
 
-
 ---
 
 ## JOINs
@@ -733,9 +826,10 @@ WITH COMPRAS_HOY AS
 SELECT *
 FROM COMPRAS_HOY;
 ```
+
 ---
 
-## CASE
+## CASE (por valor de columna)
 
 ```sql
 SELECT
@@ -1193,6 +1287,8 @@ BEGIN
     END LOOP;
 END;
 ```
+
+---
 
 ## Buenas Prácticas
 
